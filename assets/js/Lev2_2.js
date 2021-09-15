@@ -13,18 +13,29 @@ Nutze einen Loop und eine Array Methode, um an einer bestimmten Stelle das neue 
 Wandle das Array am Ende in einen String um.
 */
 
-/* let letter = [];
+
 
 function result() {
     let num = document.getElementById("number").value
     let loop = document.getElementById("resultLoop");
+    let str = ""
     for (let i = 0; i < num; i++) {
-        loop.splice(1, 0, 'o');
+        str += "o"
     }
-    document.getElementById("result").innerHTML = ("loop".join());
-    //join
-} */
+    loop.innerHTML = str;
+}
 
+function result2() {
+    let num = document.getElementById("number").value
+    let loop = document.getElementById("resultLoop");
+    let yolo = []
+    for (let i = 0; i < num; i++) {
+        yolo.push("o")
+    }
+    loop.innerHTML = yolo.join();
+}
+
+/*
 function result() {
 
     let num = Number(document.getElementById("number").value);
@@ -39,4 +50,4 @@ function result() {
         str.splice(1, 0, 'o');
     }
     document.getElementById("resultLoop").innerHTML = str.join("");
-}
+} */

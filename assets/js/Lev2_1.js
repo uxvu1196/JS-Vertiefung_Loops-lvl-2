@@ -14,12 +14,21 @@ Lass dir retArray2 in der Konsole ausgeben.
 
 */
 
-function imageArray2(){
+function imageArray2() {
     let retArray2 = [];
-    for (let i = 1; i < 101; i++) {
-        retArray2.push("image_" + i +".jpg")
+    for (let i = 1; i < 101; i++){
+    if (i < 10) {
+            retArray2.push(`image_00${i}.jpg`);
+        } else if (i < 100) {
+            retArray2.push(`image_0${i}.jpg`);
+        }
+        else {
+            retArray2.push(`image_${i}.jpg`);
+        }
     }
-    
+    return retArray2;
 }
 
-console.log( imageArray2())
+console.log(imageArray2())
+
+// literale ${} andere Schreibweise für Strings 
